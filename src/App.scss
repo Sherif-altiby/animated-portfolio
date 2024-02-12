@@ -1,0 +1,81 @@
+html{
+  font-size: 62.5%;
+}
+
+body{
+margin: 0;
+font: 300 11px/1.4 'Helvetica Neue' , "sans-serif";
+color : #444;
+background-color: #022c43;
+overflow: hidden;
+display: block;
+-webkit-font-smoothing : antialiased;
+-moz-osx-font-smoothing : grayscale;
+}
+
+$priemary_color: #ffd700;
+
+@import "animate.css";
+@import "loaders.css/src/animations/pacman.scss";
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/helvetica-neu.ttf") format("ttf");
+}
+@font-face {
+  font-family: "LA Bella Aurore";
+  src: url("./assets/fonts/LaBelleAurore.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Coolvetica";
+  src: url("./assets/fonts/CoolveticaRg-Regular.woff2") format("woff2");
+}
+
+h1{
+  font-size: 60px !important  ;
+}
+
+input,
+textarea {
+  font-family: "Helvetica Neue";
+}
+a{
+  text-decoration: none;
+}
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s ;
+  animation-fill-mode: forwards;
+}
+.pacman > div:nth-child(3),
+.pacman > div:nth-child(4),
+.pacman > div:nth-child(5),
+.pacman > div:nth-child(6).pacman > div:nth-child(3),
+.pacman > div:nth-child(4),
+.pacman > div:nth-child(5),
+.pacman > div:nth-child(6) {
+  background-color: #ffd700;
+}
+
+.pacman > div:first-of-type {
+  border-top: 25px solid #ffd700;
+  border-left: 25px solid #ffd700;
+  border-bottom: 25px solid #ffd700;
+
+}
+
+.pacman > div:nth-child(2) {
+
+  border-top: 25px solid #ffd700;
+  border-left: 25px solid #ffd700;
+  border-bottom: 25px solid #ffd700;
+
+}

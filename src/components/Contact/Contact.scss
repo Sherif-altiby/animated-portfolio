@@ -1,0 +1,142 @@
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+
+      &.half {
+        width: calc((100% - 5px) / 2);
+        display: inline-block;
+        &:nth-child(2) {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    input {
+      outline: none;
+      font-size: 14px;
+      background-color: #115172;
+      border: 0;
+      padding: 10px 0;
+      color: #fff;
+      font-weight: bold;
+      padding-left: 5px;
+      width: 100%;
+
+      &[type="submit"] {
+        width: fit-content;
+        font-size: 16px;
+        background-color: transparent;
+        border: 1px solid #ffd700;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+    textarea {
+      outline: none;
+      font-size: 14px;
+      background-color: #115172;
+      border: 0;
+      padding: 10px 0;
+      color: #fff;
+      font-weight: bold;
+      padding-left: 5px;
+      width: 100%;
+      min-height: 130px;
+    }
+  }
+}
+.info-map {
+  position: absolute;
+  background-color: #000;
+  top: 50px;
+  right: 30%;
+  z-index: 9999;
+  width: 267px;
+  padding: 20px;
+  color: #fff;
+  font-family: "Helvetica";
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+    display: block;
+    padding-top: 20px;
+    color: #ffd700;
+  }
+}
+
+.map-wrap {
+  background-color: rgba(8, 253, 216, 0.1);
+  float: right;
+  width: 53%;
+  height: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 1120px) {
+  .info-map {
+    right: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .map-wrap {
+    width: 35%;
+    height: 80%;
+    top: 10%;
+    position: absolute;
+    right: 3%;
+  }
+  .info-map {
+  display: none;
+}
+.info-map span {
+  font-size: 12px;
+  display: block;
+  padding-top: 5px;
+  color: #ffd700;
+}
+
+}
+
+@media (max-width : 676px) {
+  .map-wrap{
+    width: 82%;
+    height: 80%;
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110%;
+  }
+  
+}
